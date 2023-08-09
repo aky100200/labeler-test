@@ -1,10 +1,10 @@
-name: Labeler
+name: Labeler-Release
 on:
   pull_request:
     head:
-      - release/*
-      - develop
-
+      - main
+      - master
+      - staging
 jobs:
   label:
     runs-on: ubuntu-latest
@@ -16,4 +16,4 @@ jobs:
     - uses: actions/labeler@v4
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: ".github/labeler-pbi-main.yml"
+        configuration-path: ".github/labeler-release.yml"
