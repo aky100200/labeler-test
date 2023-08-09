@@ -1,10 +1,9 @@
 name: Labeler
 on:
-  pull_request_target:
-    branches:
+  pull_request:
+    head:
       - release/*
       - develop
-      - main
 
 jobs:
   label:
