@@ -1,12 +1,12 @@
 name: Labeler
-on: [pull_request_target]
-  branches:
-    - release/*
-    - develop
+on:
+  pull_request_target:
+    branches:
+      - release/*
+      - develop
 
 jobs:
   label:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -17,4 +17,3 @@ jobs:
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         configuration-path: ".github/labeler-pbi-main.yml"
-
