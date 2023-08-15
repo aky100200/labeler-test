@@ -1,13 +1,14 @@
 name: Labeler-Release
 on:
   pull_request:
-    branches:
-      - main
-      - master
-      - staging
+    # branches:
+    #   - main
+    #   - master
+    #   - staging
 jobs:
   label:
     runs-on: ubuntu-latest
+    if: contains(github.head_ref, 'main') 
     permissions:
       contents: read
       pull-requests: write
