@@ -1,7 +1,7 @@
 name: Labeler-Release
 on:
   pull_request:
-    head:
+    branches:
       - main
       - master
       - staging
