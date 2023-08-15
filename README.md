@@ -1,2 +1,2 @@
 # labeler-test
-hogehoge
+main
